@@ -9,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   title = 'Mi aplicación';
   
-  constructor (private menuService: MenuService, private authService: AuthService, private sessionService: SessionService) {}
+  constructor (private menuService: MenuService, private authService: AuthService, private sessionService: SessionService, private rolesService:RolesService) {}
   ngOnInit(): void {
     this.menuService.downloadMenu('DEMO','DEMOANGULAR');
+    
     let token: any = this.authService.getLoggedUser();
     this.sessionService.setData(token["user_info"].persona);
+    this.rolesService.setData(token["user_info"].rolesUser);
   }
 
 }

@@ -9,7 +9,7 @@ const routes: Routes = [
     component: MainPage
   },
   {
-    path: 'info',
+    path: 'usuario',
     component: SecondPageComponent
   },
 ];

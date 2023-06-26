@@ -1,1 +1,8 @@
-<p>Info page</p>
+<an-page>
+    <an-page-header></an-page-header>
+    <an-page-content title="Datos del usuario">
+        {{userInfo|json}}
+        <hr>
+        {{roles | json}}
+    </an-page-content>
+</an-page>
