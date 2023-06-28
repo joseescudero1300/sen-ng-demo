@@ -1,8 +1,21 @@
 <an-page>
-    <an-page-header></an-page-header>
+    <an-page-header title="Datos usuario" [list]="listBread"></an-page-header>
     <an-page-content title="Datos del usuario">
         {{userInfo|json}}
         <hr>
         {{roles | json}}
+        <br>
+        <hr>
+        {{miDato}}
+        <br>
+        
+    </an-page-content>
+    <an-page-content title="Servicios demo">
+        <div>
+            <button (click)="getLista()">lista de Usuarios</button>
+            <button (click)="guardarEmpleado()">Guardar Empleado</button>
+            <br>
+            {{list| json}}
+        </div>
     </an-page-content>
 </an-page>

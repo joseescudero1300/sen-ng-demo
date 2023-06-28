@@ -22,9 +22,9 @@ import { SecondPageComponent } from './pages/second-page/second-page.component';
       keycloak: {
        url: 'http://10.101.1.44:8083',
        realm: 'login',
-       clientId: 'angular-app',
+       clientId: 'angular-test',
      }
-   }),
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
