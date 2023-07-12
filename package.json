@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "@aduana/an-core": "^0.0.21",
+    "@aduana/an-core": "0.0.11",
     "@aduana/sen-onion-demo-rest-dom-itf": "^1.0.0",
     "@angular/animations": "^16.0.0",
     "@angular/common": "^16.0.0",
@@ -20,8 +20,8 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
-    "keycloak-angular": "^13.0.0",
-    "keycloak-js": "^20.0.5",
+    "keycloak-angular": "^14.0.0",
+    "keycloak-js": "^21.1.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

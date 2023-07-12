@@ -3,7 +3,7 @@
 export const environment = {
   production: false,
   environmentName: "desarrollo",
-  api: 'http://10.101.1.46',
+  api: 'http://desa-servicios.aduana.gob.bo',
   // api: 'http://localhost:5000',
   api2: 'http://10.0.2.36/otro-api-rest'
 };

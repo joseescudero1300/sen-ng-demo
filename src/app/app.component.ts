@@ -11,9 +11,11 @@ export class AppComponent implements OnInit{
   
   constructor (private menuService: MenuService, private authService: AuthService, private sessionService: SessionService, private rolesService:RolesService) {}
   ngOnInit(): void {
-    this.menuService.downloadMenu('DEMO','DEMOANGULAR');
-    
     let token: any = this.authService.getLoggedUser();
+
+    this.menuService.downloadMenu('DEMO','DEMOANGULAR');
+    // this.menuService.downloadMenu(token["user_info"].usuarioId,'DEMOANGULAR');
+
     this.sessionService.setData(token["user_info"].persona);
     this.rolesService.setData(token["user_info"].rolesUser);
   }

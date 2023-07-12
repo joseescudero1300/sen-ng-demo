@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { AnCoreModule, KeyCloakAuthModule } from '@aduana/an-core';
 import { MainPage } from './pages/main-page/main-page.component';
 import { SecondPageComponent } from './pages/second-page/second-page.component';
+import { MyPageComponent } from './pages/my-page/my-page.component';
+import { DemoPageModule } from './pages/demo-page.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPage,
-    SecondPageComponent
+    SecondPageComponent,
+    MyPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,13 +23,14 @@ import { SecondPageComponent } from './pages/second-page/second-page.component';
     KeyCloakAuthModule.forRoot({
       production: false,
       keycloak: {
-       url: 'http://10.101.1.44:8083',
-       realm: 'login',
-       clientId: 'angular-test',
+        url:'http://desa-login.aduana.gob.bo:8083',
+        realm: 'login',
+        clientId: 'angular-test',
      }
     }),
+    DemoPageModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
