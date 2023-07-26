@@ -17,7 +17,7 @@ export class EmpleadoService {
   constructor(private httpClient : HttpClient) { }
 
   listaEmpleados() : Observable<Respuesta<ObjRespuestaLista>> {
-    return this.httpClient.get<Respuesta<ObjRespuestaLista>>(URLEmpleados).pipe(retry(0),catchError(this.handleError));
+    return this.httpClient.get<Respuesta<ObjRespuestaLista>>(URLEmpleados,).pipe(retry(0),catchError(this.handleError));
   }
 
   guardarEmpleado(empleado:ICrearEmpleadoDto ) : Observable<Respuesta<ObjRespuesta>> {

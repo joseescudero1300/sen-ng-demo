@@ -31,7 +31,7 @@ export class NotificacionesPage implements OnInit {
 
   showAlertError () {
     this.notificacionService.error(
-      'Existen cambios no puede pasar al siguiente paso'
+      'Existen cambios no puede pasar al siguiente paso', 1500
     );
   }
   

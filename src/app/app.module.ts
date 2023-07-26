@@ -8,6 +8,7 @@ import { MainPage } from './pages/main-page/main-page.component';
 import { SecondPageComponent } from './pages/second-page/second-page.component';
 import { MyPageComponent } from './pages/my-page/my-page.component';
 import { DemoPageModule } from './pages/demo-page.module';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,11 +23,7 @@ import { DemoPageModule } from './pages/demo-page.module';
     AnCoreModule,
     KeyCloakAuthModule.forRoot({
       production: false,
-      keycloak: {
-        url:'http://desa-login.aduana.gob.bo:8083',
-        realm: 'login',
-        clientId: 'angular-test',
-     }
+      keycloak: environment.keycloak
     }),
     DemoPageModule
   ],

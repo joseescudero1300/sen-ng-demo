@@ -1,3 +1,4 @@
+import { Generico } from '@aduana/an-core/lib/core/models/generico.model';
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,17 +11,24 @@ export class SelectorPageComponent {
   lista:string[]=["Opcion 1","Opcion 2","Opcion 3", "Opcion 4"];
   // seleccionado: any= 'Opcion 3';
   seleccionado: any= undefined;
-  
 
+  // objSelected: Generico = {};
+  objSelected: any = {};
+  keyValueSelected: Generico = {};
+
+  
   listaObj: any [] = [
     {
-      name: 'Opcion 1'
+      valor: 'Opcion 1',
+      clave: '123'
     },
     {
-      name: 'Opcion 2'
+      valor: 'Opcion 2',
+      clave: '456'
     },
     {
-      name: 'Opcion 3'
+      valor: 'Opcion 3',
+      clave: '789'
     },
   ];
 

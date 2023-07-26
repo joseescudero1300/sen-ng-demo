@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: 'usuario',
-    component: SecondPageComponent
+    component: SecondPageComponent,
   },
   {
     path: 'mi-pagina',
