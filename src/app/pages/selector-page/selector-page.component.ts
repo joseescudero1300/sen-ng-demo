@@ -14,13 +14,14 @@ export class SelectorPageComponent {
 
   // objSelected: Generico = {};
   objSelected: any = {};
-  keyValueSelected: Generico = {};
+  keyValueSelected: Generico = {   valor: 'Opcion 3',
+  clave: '789'};
 
   
   listaObj: any [] = [
     {
       valor: 'Opcion 1',
-      clave: '123'
+      clave: '123',
     },
     {
       valor: 'Opcion 2',

@@ -18,4 +18,18 @@
             {{list| json}}
         </div>
     </an-page-content>
+
+<!--     <an-page-content title="Ejemplo de selector">
+        <an-selector-buscador [opciones]="listaObj" [(seleccionado)]="keyValueSelected"></an-selector-buscador>
+        <div class="row p-3">
+            Valor seleccionado: {{keyValueSelected | json}}
+            <button (click)="getValue()">HOLA</button>
+        </div>
+    </an-page-content> -->
+
+    <an-page-content title="Ejemplo de consumo con token">
+        <an-button tipo="primary" (onClick)="getToken()" texto="Consumir con token"></an-button>
+        <br>
+        <textarea id="myTextArea" [value]="dataWS"  rows=15 style="width: 100%;"></textarea>
+    </an-page-content>
 </an-page>

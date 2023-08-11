@@ -15,7 +15,7 @@
     </an-page-content>
 
     <an-page-content title="Con buscador">
-        <an-selector-buscador [opciones]="listaObj" [(seleccionado)]="keyValueSelected"></an-selector-buscador>
+        <an-selector-buscador label="Title" [opciones]="listaObj" [(seleccionado)]="keyValueSelected"></an-selector-buscador>
         <div class="row p-3">
           Valor seleccionado: {{keyValueSelected | json}}
         </div>

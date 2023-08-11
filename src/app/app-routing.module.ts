@@ -8,6 +8,7 @@ import { NotificacionesPage } from './pages/notificaciones-page/notificaciones-p
 import { SelectorPageComponent } from './pages/selector-page/selector-page.component';
 import { ListPageComponent } from './pages/list-page/list-page.component';
 import { ButtonsPage } from './pages/buttons-page/buttons-page.component';
+import { DocumentPageComponent } from './pages/document-page/document-page.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,10 @@ const routes: Routes = [
   {
     path: 'notificaciones',
     component: NotificacionesPage
+  },
+  {
+    path: 'documento',
+    component: DocumentPageComponent
   },
   {
     path: '**',
