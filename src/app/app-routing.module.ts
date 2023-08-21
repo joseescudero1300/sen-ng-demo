@@ -9,6 +9,7 @@ import { SelectorPageComponent } from './pages/selector-page/selector-page.compo
 import { ListPageComponent } from './pages/list-page/list-page.component';
 import { ButtonsPage } from './pages/buttons-page/buttons-page.component';
 import { DocumentPageComponent } from './pages/document-page/document-page.component';
+import { TablePageComponent } from './pages/table-page/table-page.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,10 @@ const routes: Routes = [
   {
     path: 'documento',
     component: DocumentPageComponent
+  },
+  {
+    path: 'tablas',
+    component: TablePageComponent
   },
   {
     path: '**',

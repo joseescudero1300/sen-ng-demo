@@ -1,5 +1,6 @@
-import { AuthService, MenuService, RolesService, SessionService } from '@aduana/an-core';
+import { AuthService, IconMenuService, MenuIcon, MenuService, RolesService, SessionService } from '@aduana/an-core';
 import { Component, OnInit } from '@angular/core';
+import { listIcon } from './config/icon.menu';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   title = 'Mi aplicación';
   
-  constructor (private menuService: MenuService, private authService: AuthService, private sessionService: SessionService, private rolesService:RolesService) {}
+  constructor (private menuService: MenuService, private authService: AuthService, private sessionService: SessionService, private rolesService:RolesService, private iconMenuService: IconMenuService) {}
   ngOnInit(): void {
     let token: any = this.authService.getLoggedUser();
 
@@ -18,6 +19,9 @@ export class AppComponent implements OnInit{
 
     this.sessionService.setData(token["user_info"].persona);
     this.rolesService.setData(token["user_info"].rolesUser);
+    
+
+    this.iconMenuService.setIconList(listIcon);
   }
 
 }

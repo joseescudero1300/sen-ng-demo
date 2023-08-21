@@ -6,13 +6,15 @@ import { ListPageComponent } from "./list-page/list-page.component";
 import { AnCoreModule, NotFoundPage } from "@aduana/an-core";
 import { CommonModule } from "@angular/common";
 import { DocumentPageComponent } from "./document-page/document-page.component";
+import { TablePageComponent } from "./table-page/table-page.component";
 
 let components: any[] = [
     ButtonsPage,
     ListPageComponent,
     SelectorPageComponent,
     NotificacionesPage,
-    DocumentPageComponent
+    DocumentPageComponent,
+    TablePageComponent
     // NotFoundPage
 ];
 

@@ -25,10 +25,13 @@ export class DocumentPageComponent implements OnInit{
     // minio path
     //http://10.0.2.152:3000/file/dowload?id=an.sen.repo/2023/Agosto/c12aa6664acb4609cf840af3f83eb715.pdf
     // let URL = 'http://10.0.2.152:3000/file/dowload?id=an.sen.repo/2023/Agosto/c12aa6664acb4609cf840af3f83eb715.pdf';
-    let URL = 'http://10.0.2.152:3000/file/dowload?id=an.sen.repo/2023/Agosto/c12aa6664acb4609cf840af3f83eb715.pdf';
-    console.log('encode URL', encodeURI(URL) );
-    let urlPATH = await this.minIOFileClient.getUrlPDF (URL);
-    this.url = urlPATH ; 
+    // let URL = 'http://10.0.2.152:3000/file/dowload?id=an.sen.repo/2023/Agosto/c12aa6664acb4609cf840af3f83eb715.pdf';
+    
+    let URL = 'http://desa-servicios.aduana.gob.bo/str-mul-repo-rest/reporte';
+    let urlPATH = await this.minIOFileClient.getPdfDoc (URL,this.objDoc);
+
+    // window.open(urlPATH);
+    this.url = urlPATH ;
   }
   
 // minIOs  
@@ -39,5 +42,25 @@ export class DocumentPageComponent implements OnInit{
       this.doc64 = DocBase64; 
     },1000);
   }
+  
+  objDoc = {
+      "templateId": "an-str-mul-repo/templates/AR-FAP/template-AR-FAP.odt",
+      "formatter": "pdf",
+      "data": {
+        "numf": 22,
+        "version": 2,
+        "fecha": "11-08-23",
+        "gnf": "Nombre de gnf sdfasfafdasfasfa asdf asdf adf",
+        "jdgr": "Nombre de jdgr",
+        "raram": "Nombre de raram",
+        "ar-fap": [
+          {"razon_social" : "Juan", "nit": 21321, "estado_nit": "AC", "dom_tri": "Junin #1", "tipo_mer": "A", "obs_ggnf": ""},
+          {"razon_social" : "Esteban", "nit": 10352635014, "estado_nit": "AC", "dom_tri": "Junin #1", "tipo_mer": "A", "obs_ggnf": ""},
+          {"razon_social" : "Daniel", "nit": 21321, "estado_nit": "AN", "dom_tri": "Junin #2", "tipo_mer": "A", "obs_ggnf": "RECHAZADO"},
+          {"razon_social" : "Rolando", "nit": 21321, "estado_nit": "AN", "dom_tri": "Junin #3", "tipo_mer": "A", "obs_ggnf": ""},
+          {"razon_social" : "Dennys", "nit": 21321, "estado_nit": "AN", "dom_tri": "Junin #323", "tipo_mer": "A", "obs_ggnf": ""}
+        ]
+      }
+    };
 
 }

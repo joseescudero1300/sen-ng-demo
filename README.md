@@ -71,13 +71,32 @@ Donde:
 |Etiqueta|Descripción|opciones|
 |---|---|---|
 |`<an-button>` | Boton con el estilo de plantilla modernize | tipo: `primary|secondary|success|info|warning|danger|light|dark`,<br> icono: `'ti ti-send fs-4 me-2'`,<br> size:`'btn-lg|btn-xs|btn-sm'`  |
-|`<an-button-light>`| Bariante del boton pero con estilo light |
-|`<an-button-outline>`| Bariante del boton con estilo outline |
-
-|`<an-button-circle>`| Bariante del boton con estilo outline |
-|`<app-button-circle-light>`| Bariante del boton con estilo outline |
+|`<an-button-light>`| Bariante del boton pero con estilo light | |
+|`<an-button-outline>`| Bariante del boton con estilo outline | |
+|`<an-button-circle>`| Bariante del boton con estilo outline | |
+|`<app-button-circle-light>`| Bariante del boton con estilo outline | |
 
 **Visor de Documentos PDF**
 |Etiqueta|Descripción|opciones|
 |---|---|---|
 |`<an-visor-pdf>`| visualizador de documento PDF | document: `string base64 | url path` |
+
+**Listas**
+
+|Etiqueta|Descripción|opciones|
+|---|---|---|
+|`<an-scroll-lista>`| Componente contenedor de lista  | document: `string base64, url path` |
+|`<an-lista>`| Componente item de lista | document: `string base64, url path` |
+
+** Notificaciones **
+
+|Etiqueta|Descripción|opciones|
+|---|---|---|
+|`<an-notificacion>`| Componente para mostrar toast de notificaciones  | |
+
+** Selectores **
+|Etiqueta|Descripción|opciones|
+|---|---|---|
+|`<an-selector>`| Componente para mostrar toast de notificaciones  | |
+
+
