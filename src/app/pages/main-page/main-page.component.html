@@ -1,10 +1,72 @@
 <an-page>
-    <an-page-header title="Main page"></an-page-header>
-    <an-page-content title="Mi Formulario">
-        <div acciones>
-            <an-icon-button icono="ti ti-search" (btnClick)="hello()"></an-icon-button>
+  <an-page-header title="Consultas de Certificaciones"></an-page-header>
+  <an-page-content title="Fecha de Certificacion">
+    <!-- <div acciones>
+      <an-icon-button
+        icono="ti ti-search"
+        (btnClick)="hello()"
+      ></an-icon-button>
+    </div>
+    sdsdfsdf -->
+    <div>
+      <div class="panel-body" style="padding: 0px 0px 0px 0px">
+        <div class="panel panel-default">
+          <div class="panel-body" style="padding: 0px 15px 0px 15px">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-1">
+                <div class="form-group">
+                  <label for="lblfecha" class="label-required">Inicio:</label>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                  <div>
+                    <input
+                      type="date"
+                      name="fechaIni"
+                      maxlength="10"
+                      value=""
+                      id="fechaIni"
+                      class="date1 form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-1">
+                <div class="form-group">
+                  <label for="lblfecha" class="label-required">Fin:</label>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                  <input
+                    type="date"
+                    name="fechaFin"
+                    maxlength="10"
+                    value=""
+                    id="fechaFin"
+                    class="date2 form-control"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          &nbsp;<code class="label-required">Campos Obligatorios</code>
         </div>
-        sdsdfsdf
-    </an-page-content>
+        <div class="col-sm-12" style="padding: 0px 0px 15px 0px" align="center">
+          <button
+            type="submit"
+            name="buscar"
+            id="buscar"
+            class="btn btn-primary"
+            value="guardar"
+            (click)="buscarDatos()"
+          >
+            Buscar Datos
+          </button>
+        </div>
+      </div>
+      <input type="hidden" id="opcion" name="opcion" value="" />
+    </div>
+  </an-page-content>
 </an-page>
-
